@@ -8,6 +8,7 @@
     <title>Harviator's Portfolio Website</title>
     <meta charset="UTF-8">
     <meta name="decription" content="This is a portfolio website for the user Harviator">
+  </head>
     
 
 
