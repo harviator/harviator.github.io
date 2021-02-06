@@ -31,7 +31,6 @@
       .navbar {
         display: flex;
         font-family: 'Roboto', sans-serif;
-        background color: #ffffff;
         padding: 20px 20px;
       }
         
@@ -41,8 +40,35 @@
       }
       
       .navbar a:visited {
-        background-color: #ffffff;
         color: #cccccc;
+      }
+      
+      /* Column Container */
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      
+      /* Two unequal columns */
+      /* Side bar for the navbar */
+      .side {
+        flex: 20%;
+        background-color: #fff;
+        padding: 10px;
+      }
+      
+      /* Main column */
+      .main {
+        flex: 80%;
+        background-color: white;
+        padding: 20px;
+      }
+      
+      /* Responsive layout */
+      @media screen and (max-width: 700px) {
+        .row, .navbar {
+          flex-direction: column;
+        }
       }
         
     
@@ -55,7 +81,7 @@
     <header class="header">
       <h1>Harviator Website</h1>
       <p style="font-family:'Roboto'">Code Portfolio - Maybe a Blog About Starting a Second Career in Coding - Interests</p>
-      <nav class="navbar" style="background-color: #ffffff">
+      <nav class="navbar">
         <a href="#">About</a>
         <a href="#">Projects</a>
         <a href="#">Cool Stuff</a>
