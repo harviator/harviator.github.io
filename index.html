@@ -30,7 +30,7 @@
       }
       
       .navbar {
-        display: flex;
+        flex: 20%;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
@@ -48,7 +48,15 @@
         color: #cccccc;
       }
       
+      .main {
+        flex: 80%;
+        flex-direction: column;
+      }
       
+      .footer {
+        background-color: black;
+        color: white;
+      }
         
     
     </style>
@@ -69,12 +77,12 @@
     </nav>
     
     
-    <main>
+    <main class="main">
       <h3>Welcome!</h3>
       <p>This is the Harviator user website.  It's going to be used as a code portfolio, maybe a place to blog about my experience of getting into codeing as a second career, and cool things I find on the internet.</p>
     </main>
     
-    <footer>
+    <footer class="footer">
       <p>Maybe some contact info.</p>
     </footer>
     
