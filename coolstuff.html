@@ -1,1 +1,109 @@
+<!DOCTYPE html>
+<!--# harviator.github.io-->
 
+<html>
+
+  <head>
+    <title>Harviator</title>
+    <meta charset="UTF-8">
+    <meta name="decription" content="This is a portfolio website for the user Harviator">
+    <meta name="author" content="Harviator">
+    <meta name="keywords" content="code, projects, portfolio">
+    <meta name="viewport" content="width=device-width, intial scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+  
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+      }
+      
+      .header {
+        font-family: 'Orbitron', sans-serif;
+        text-align: center;
+        padding: 10px;
+        background: #f2f2f2;
+        border-bottom: 1px solid black;
+      }
+      
+      .navbar {
+        display: flex;
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+        border-bottom: 1px solid black;
+      }
+      
+      .navbar a {
+        color: black;
+        padding: 10px 10px;
+        text-decoration: none;
+        text-align: center;
+      }
+        
+      .navbar a:hover {
+        background-color: #000000;
+        color: #ffffff;
+      }
+      
+      .navbar a:visited {
+        color: #737373;
+      }
+      
+      .main {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+      }
+      
+      .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        background-color: black;
+        color: white;
+      }
+        
+      @media screen and (max-width: 700px) {
+        .main, .navbar {
+          flex-direction: column;
+        }
+      }
+      
+    </style>
+  </head>
+ 
+
+  <body>
+    
+    <header class="header">
+      <h1>Harviator</h1>
+      <p style="font-family:'Roboto'">Code Portfolio - A Blog About Starting a Second Career in Coding - Interests</p>
+    </header>
+    
+    <nav class="navbar">
+      <a href="index.html">Home</a>  
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="coolstuff.html">Cool Stuff</a>
+    </nav>
+    
+    
+    <main class="main">
+      <h3>Cool Stuff</h3>
+      <p>This is the website for the user Harviator.  Here you can find projects I've done, learn about my experience of getting into coding as a second career, and cool things I find on the internet.</p>
+    </main>
+    
+    <footer class="footer">
+      <p>What's Up</p>
+    </footer>
+    
+  </body>
+  
+  
+</html>
