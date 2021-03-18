@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+
+<html>
+  
+  <head>
+    <title>Harviator: Product Landing Page Project</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="freeCodeCamp.org Product Landing Page Project">
+    <meta name="author" content="Haviator">
+    <meta name="keywords" content="freecodecamp.org, projects, Product Landing Page">
+    <meta name="viewport" content="width=device-width, intial scale=1.0">
+    
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oxanium:wght@500&display=swap" rel="stylesheet">
+    
+    <!--Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        background-color: #f2f2f2;
+      }
+
+      body {
+        font-family: 'Open Sans', sans-serif;
+      }
+
+      #header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 20px 20px 10px 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        font-family: 'Oxanium', cursive;
+        background-color: #f2f2f2;
+        border-bottom: 1px solid black;
+        box-sizing: border-box;
+      }
+
+      @media (max-width: 615px) {
+        #header-img {
+          height: auto;
+          width: 100%;
+        }
+      }
+
+      #nav-bar {
+        flex-grow: 0.5;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        font-size: 20px;
+      }
+
+      #nav-bar a {
+        color: black;
+        text-decoration: none;
+        text-align: center;
+      }
+
+      #nav-bar a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 630px) {
+        #nav-bar {
+          flex-direction: column;
+        }
+      }
+
+      #features {
+        margin-top: 150px;
+        padding: 10px 20px 10px 20px;
+        text-align: center;
+      }
+
+      @media (max-width: 615px) {
+        #features {
+          margin-top: 250px;
+        }
+      }
+
+      .intro > h2 {
+        color: #19334d;
+      }
+
+      .feature {
+        text-align: left;
+        padding: 30px;
+        background: linear-gradient(to top, #bfbfbf 0%, #f2f2f2 100%)
+      }
+
+      .feat1 {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-column-gap: 20px;
+      }
+
+      #icon1 {
+        grid-column: 1/2;
+        grid-row: 1/3;
+        align-self: center;
+        justify-self: center;
+      }
+
+      #hdg1 {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        color: #19334d;
+      }
+
+      #hdg1 > h3 {
+        margin: 0;
+      }
+
+      #p1 {
+        grid-column: 2/3;
+        grid-row: 2/3;
+      }
+
+      #p1 > p {
+        margin: 0 0 10px 0;
+      }
+
+      .feat2 {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-column-gap: 20px;
+      }
+
+      #icon2 {
+        grid-column: 1/2;
+        grid-row: 1/3;
+        align-self: center;
+        justify-self: center;
+        font-size: 25px;
+      }
+
+      #hdg2 {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        color: #19334d;
+      }
+
+      #hdg2 > h3 {
+        margin: 0;
+      }
+
+      #p2 {
+        grid-column: 2/3;
+        grid-row: 2/3;
+      }
+
+      #p2 > p {
+        margin: 0 0 10px 0;
+      }
+
+      .feat3 {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-column-gap: 20px;
+      }
+
+      #icon3 {
+        grid-column: 1/2;
+        grid-row: 1/3;
+        align-self: center;
+        justify-self: center;
+        font-size: 25px;
+      }
+
+      #hdg3 {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        color: #19334d;
+      }
+
+      #hdg3 > h3 {
+        margin: 0;
+      }
+
+      #p3 {
+        grid-column: 2/3;
+        grid-row: 2/3;
+      }
+
+      #p3 > p {
+        margin: 0;
+      }
+
+      .material-icons {
+        font-size: 36px !important; /* Can't get the icon's to change size */
+        color: #ff6600;
+      }
+
+      @media (min-width: 835px) {
+        .feature {
+        display: flex;
+        }
+      }
+
+      #about {
+        background-color: white;
+        margin-top: 20px;
+      }
+
+      #about > h2 {
+        color: #19334d;
+        padding: 5px;
+      }
+
+      #pricing {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      #pricing > div {
+        flex: 1;
+      }
+
+      .hn {
+        border-style: solid;
+        border-width: 1px;
+        padding: 10px;
+        margin-right: 5px;
+        background: linear-gradient(#bfbfbf 0%, #f2f2f2 100%);
+      }
+
+      .hn > h4 {
+        color: #19334d;
+        border-bottom: solid;
+        border-width: 1px;
+        font-size: 20px;
+        margin-top: 0;
+      }
+
+      .hn > ul {
+        list-style-type: none;
+        padding: 0;
+        line-height: 200%;
+      }
+
+      .hn > h3 {
+        text-shadow: 2px 2px white;
+      }
+
+      .hn2 {
+        border-style: solid;
+        border-width: 1px;
+        padding: 10px;
+        margin-left: 5px;
+        background: linear-gradient(#bfbfbf 0%, #f2f2f2 100%);
+      }
+
+      .hn2 > h4 {
+        color: #19334d;
+        border-bottom: solid;
+        border-width: 1px;
+        font-size: 20px;
+        margin-top: 0;
+      }
+
+      .hn2 > ul {
+        list-style-type: none;
+        padding: 0; 
+        line-height: 200%;
+      }
+
+      .hn2 > h3 {
+        text-shadow: 2px 2px white;
+      }
+
+      button {
+        background-color: #009999;
+        border: none;
+        color: white;
+        padding: 10px 20px 10px 20px;
+        font-size: 15px;
+        transition-duration: 0.2s;
+      }
+
+      button:hover {
+        background-color: #00cccc;
+        color: black;
+      }
+
+      button:active {
+        color: white;
+      }
+
+      @media (max-width: 800px) {
+        #pricing {
+          flex-direction: column;
+        }
+      }
+  
+      .hn {
+         margin: 0 0 20px 0;
+       }
+  
+      .hn2 {
+          margin: 0 0 10px 0;
+      }
+
+      form {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #19334d;
+        color: white;
+      }
+
+      #email {
+        margin-top: 20px;
+        margin-right: 0px;
+        font-size: 15px;
+        border-width: 1px;
+        padding: 5px;
+      }
+
+      #submit {
+        background-color: #00cccc;
+        border: none;
+        color: black;
+        display: inline-block;
+        margin-top: 20px;
+        margin-left: 0px;
+        font-size: 15px;
+        padding: 6px;
+      }
+
+      #submit:hover {
+        background-color: #009999;
+      }
+
+      #submit:active {
+        color: white;
+      }
+
+      footer {
+        margin: 20px 20px 0px 20px;
+        padding: 10px;
+        text-align: right;
+        font-size: 10px;
+        border-top: solid;
+        border-width: 1px;
+        border-color: #bfbfbf;
+        background-color: #d9d9d9;
+      }
+    </style>
+  </head>
+  
+  <body>
+    
+    <header id="header">
+        <img height="100" id="header-img" src="https://user-images.githubusercontent.com/78506767/110539696-8fa07d00-80f3-11eb-871b-8a7a4e9a7411.png" alt="Hawk Nest Logo">  
+      
+      <nav id="nav-bar">
+        <a class="nav-link" href="#features">Features</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#pricing">Pricing</a>
+      </nav>
+    </header>
+    
+    <main id="features">
+      <div class="intro">
+        <h2>Keep Your Crypto Safe</h2>
+        <p>Protect your cryptocurrency nest egg with the ultra secure Hawk Nest cold wallet</p>
+      </div>
+      
+      <div class="feature">
+        <div class="feat1">
+          <div id="icon1"><i class="material-icons">security</i></div>
+          <div id="hdg1"><h3>Next Level Security</h3></div>
+          <div id="p1"><p>Like hawk's nest is high and unreachable your crypto assests will be safe, offline, and therefore out of reach from hackers</p></div>
+        </div>
+        
+        <div class="feat2">
+          <div id="icon2"><i class="material-icons">military_tech</i></div>
+          <div id="hdg2"><h3>Military Grade Construction</h3></div>
+          <div id="p2"><p>Your Hawk Nest is constructed only using military grade materials and construction techniques for durability</p></div>
+        </div>
+        <div class="feat3">
+          <div id="icon3"><i class="material-icons">local_shipping</i></div>
+          <div id="hdg3"><h3>Next Day Shipping</h3></div>
+          <div id="p3"><p>We make sure you can protect your coins and tokens quickly by offering next day delievery</p></div>
+        </div>
+      </div>
+      
+      <div id="about">
+        <h2>How Does A Cold Wallet Work?</h2>
+        <p>Watch this video to learn about cold wallets</p>
+        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/aPprQUQljHE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      
+      <div id="pricing">
+        <div class="hn">
+          <h4>Hawk Nest</h4>
+          <ul>
+            <li>Keep your crypto nest egg secure</li>
+            <li>Military grade construction</li>
+            <li>Holds 1500 different coins and tokens</li>
+          </ul>
+          <h3>$99.99</h3>
+          <button type="button">Select</button>
+        </div>
+        <div class="hn2">
+          <h4>Hawk Nest 2.0</h4>
+          <ul>
+            <li>For people on the run</li>
+            <li>Same standard features + Bluetooth</li>
+            <li>Manage your cypto anywhere</li>
+          </ul>
+          <h3>$199.99</h3>
+          <button type="button">Select</button>
+        </div>
+      </div>
+      
+      <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <div class="form-group">
+          <label for="email" id="email-label">If you would like to stay up-to-date on our products and promotions please enter your email</label><br>
+          <input id="email" type="email" name="email" placeholder="Enter your email"><input id="submit" type="submit" value="Sign-up">
+        </div>
+      </form>
+    </main>
+    
+    <footer>
+      <p>Hawk Nest<img height="25" src="https://user-images.githubusercontent.com/78506767/110345919-0d359180-7ffd-11eb-8821-48ef42356752.png" alt="Hawk Nest Logo"></p>
+    </footer>
+  </body>
+<html>
