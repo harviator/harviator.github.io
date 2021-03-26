@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html>
+  
+  <head>
+    <!--Test Suite-->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    
+    <title>Harviator: Technical Document Page Project</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="freeCodeCamp.org Technical Document Page Project">
+    <meta name="author" content="Harviator">
+    <meta name="keywords" content="freeCodeCamp.org, html, css, projects">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto&display=swap" rel="stylesheet">
+    
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        font-family: 'Roboto', sans-serif;
+        color: #404040;
+      }
+
+      nav {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        grid-area: nav;
+        border-right-style: solid;
+        border-right-width: 3px;
+        border-color: #808080;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: 350px auto;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+          "nav main"
+          "nav footer";
+      }
+
+      @media (max-width: 800px) {
+        .container {
+          grid-template-columns: auto;
+          grid-template-rows: auto auto auto;
+          grid-template-areas:
+            "nav"
+            "main"
+            "footer";
+        }
+  
+        nav {
+          height: 287px;
+          border-style: solid;
+          border-width: 3px;
+        }
+      }
+
+      #navbar {
+        background-color: #f2f2f2;
+        display: flex;
+        flex-direction: column;
+      }
+
+      nav > header {
+        padding: 10px;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        font-size: 15px;
+      }
+
+      #navbar > a {
+        color: #4d4d4d;
+        text-decoration: none;
+        padding: 10px;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+      }
+
+      #main-doc {
+        grid-area: main;
+        padding: 20px;
+      }
+
+      header {
+        font-family: 'Quicksand', sans-serif;
+        font-size: 21px;
+        color: #000000;
+      }
+
+      code {
+        background-color: #d9d9d9;
+      }
+
+      #html_page_structure > ul {
+        background-color: #d9d9d9;
+      }
+
+      #css > ul {
+        background-color: #d9d9d9;
+      }
+
+      .main-section > p > a {
+        text-decoration: none;
+        color: inherit;
+        font-weight: bold;
+      }
+
+      .main-section > p > a:hover {
+        text-decoration: underline;
+        color: #0a0a23;
+        font-weight: bold;
+      }
+
+      .main-section > ul > li > a {
+        text-decoration: none;
+        color: inherit;
+        font-weight: bold;
+      }
+
+      .main-section > ul > li > a:hover {
+        text-decoration: underline;
+        color: #0a0a23;
+        font-weight: bold;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      footer {
+        grid-area: footer;
+        color: white;
+        background-color: #bfbfbf;
+        text-align: center;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <div class="container">
+      <nav id="navbar">
+        <header>
+          <h1>HTML & CSS</h1>
+        </header>
+        <a class="nav-link" href="#introduction">Introduction</a>
+        <a class="nav-link" href="#html_page_structure">HTML Page Structure</a>
+        <a class="nav-link" href="#basic_html_tags">Basic HTML Tags</a>
+        <a class="nav-link" href="#css">CSS</a>
+        <a class="nav-link" href="#resources">Resources</a>
+      </nav>
+    
+      <main id="main-doc">
+        <section class="main-section" id="introduction">
+          <header><h3>INTRODUCTION</h3></header>
+          <p>These are snippets of notes I made while leaning HTML & CSS and are not to be considered exhaustive.</p>
+          <p>They are simply for sole purpose of the Build a Technical Document Page Project for <a href="https://www.freecodecamp.org" target="_blank">freeCodeCamp.org</a>'s Responsive Web Design Certificate.</p>
+          <p>If you are interested in learning HTML & CSS, as well as other code languages, I would highly recommend visiting <a href="https://www.freecodecamp.org" target="_blank">freeCodeCamp.org</a>.</p>
+        </section>
+      
+        <section class="main-section" id="html_page_structure">
+          <header><h3>HTML PAGE STRUCTURE</h3></header>
+          <p>The basic HTML page structure looks like this:</p>
+          <ul>
+            <li><code>&lt;!DOCTYPE html&gt;</code></li>
+              <ul>
+                <li><code>&lt;html&gt;</code></li>
+                  <ul>
+                    <li><code>&lt;head&gt;</code></li>
+                    <li><code>&lt;/head&gt;</code></li>
+                    <li><code>&lt;body&gt;</code></li>
+                    <li><code>&lt;/body&gt;</code></li>
+                  </ul>
+                <li><code>&lt;/html&gt;</code></li>
+              </ul>
+          </ul>
+          <p>The <code>&lt;!DOCTYPE html&gt;</code> tag tells web browsers this is an html document.</p>
+          <p>The highest level tag that contains anything is <code>&lt;html&gt;&lt;/html&gt;</code>.</p>
+          <p>The <code>&lt;head&gt;&lt;/head&gt;</code> tag is like the command center of the html file.  It defines the document and contains the metadata.</p>
+          <p>Lastly, the <code>&lt;body&gt;&lt;/body&gt;</code> tags contain the main content of the website.</p>
+        </section>
+      
+        <section class="main-section" id="basic_html_tags">
+          <header><h3>BASIC HTML TAGS</h3></header>
+          <p>There are some basic HTML tags that are good to know.</p>
+          <ul>
+            <li>To make a comment you <code>&lt;!--The note you want to leave--&gt;</code> the comment tag is useful to for making notes for yourself or other developers.  They can also be used to block code.</li>
+            <li><code>&lt;header&gt;&lt;/header&gt;</code> tags usually have information that is on every page such as the navigation menu and branding information.</li>
+            <li><code>&lt;main&gt;&lt;/main&gt;</code> tags contain the main content such as articles.</li>
+            <li><code>&lt;footer&gt;&lt;/footer&gt;</code> tags are for bottom of the page stuff</li>
+          </ul>
+          <p>While the comment tags can be used anywhere the other tags are typically used within the <code>&lt;body&gt;&lt;/body&gt;</code> tags using indenting to keep everything neat and organized.</p>
+        </section>
+      
+        <section class="main-section" id="css">
+          <header><h3>CSS</h3></header>
+          <p>CSS is used to style elements.  You can style elements inline for example, <code>&lt;p style="color: blue;"&gt;</code>.  You can also use CSS selectors to style elements.  To do this you can create a style block within the head of the document.</p>
+          <p>It would look something like this:</p>
+          <ul>
+            <li><code>&lt;head&gt;</code></li>
+              <ul>
+                <li><code>&lt;style&gt;</code></li>
+                  <ul>
+                    <li><code>p {</code></li>
+                      <ul>
+                        <li><code>color: blue;</code></li>
+                      </ul>
+                    <li><code>}</code></li>
+                  </ul>
+                <li><code>&lt;/style&gt;</code></li>
+              </ul>
+            <li><code>&lt;/head&gt;</code></li>
+          </ul>
+        </section>
+      
+        <section class="main-section" id="resources">
+          <header><h3>RESOURCES</h3></header>
+          <p>To find out more about HTML and CSS you can visit the following links.</p>
+          <ul>
+            <li><a href="https://youtu.be/pQN-pnXPaVg" target="_blank">HTML Full Course - Build a Website Tutorial</a></li>
+            <li><a href="https://youtu.be/ieTHC78giGQ" target="_blank">CSS Full Course - Includes Flexbox and CSS Grid Tutorials</a></li>
+          </ul>  
+        </section>
+      </main>
+      <footer>
+        <p>HTML & CSS</p>
+      </footer>
+    </div>
+  </body>
+</html>
